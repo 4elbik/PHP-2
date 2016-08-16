@@ -8,7 +8,8 @@
     <body>
         <h2>Свежие новости на At Monent:</h2>
         <?php foreach ($items as $item): ?>
-        <?php echo $item['title']; ?>
+        <h4><?php echo $item['title']; ?></h4>
+        <?php echo $item['description']; ?><br /><br />
         <?php endforeach; ?>
     </body>
 </html>
