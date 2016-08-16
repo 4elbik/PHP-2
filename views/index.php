@@ -8,7 +8,7 @@
     <body>
         <h2>Свежие новости на At Monent:</h2>
         <?php foreach ($items as $item): ?>
-        <h4><?php echo $item['title']; ?></h4>
+        <h4><?php echo $item['title']; ?> - <em><?php echo $item['date']; ?></em></h4>
         <?php echo $item['description']; ?><br /><br />
         <?php endforeach; ?>
     <a href="/add_news.php">Добавить новость</a>

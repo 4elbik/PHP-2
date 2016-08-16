@@ -16,3 +16,9 @@ function sql_query($query)
     }
     return $ret;
 }
+
+function sql_exec($query)
+{
+    connect_db();
+    $res = mysql_query($query);
+}

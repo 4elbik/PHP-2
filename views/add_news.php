@@ -17,6 +17,10 @@
         Описание:<br />
         <textarea name="description" cols="32" rows="6"></textarea>
     </label><br />
+    <label>
+        Выберите дату:
+        <input type="date" name="date" />
+    </label><br />
     <input type="submit" />
 </form>
 <a href="/">Вернуться назад к новостям</a>

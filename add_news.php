@@ -2,17 +2,22 @@
 
 //Ещё один контроллер для добавления новостей
 
+include __DIR__ . '/models/news.php';
+
 if (!empty($_POST)) {
     $data = [];
-    if (!empty($_POST['title'])) {
-        $data['title'] = $_POST['title'];
-    }
-    if (!empty($_POST['description'])) {
-        $data['description'] = $_POST['description'];
+    foreach ($_POST as $key => $value) {
+        $data[$key] = $value;
     }
 
-    var_dump($data);
+    //var_dump($data);die;
 }
+
+if (isset($data['title']) && isset($data['description']) && isset($data['date'])) {
+    News_insert($data);
+    header('Location: /');
+}
+
 
 include __DIR__ . '/views/add_news.php';
 
