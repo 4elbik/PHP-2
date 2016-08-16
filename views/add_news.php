@@ -23,7 +23,7 @@
     </label><br />
     <input type="submit" />
 </form>
-<a href="/">Вернуться назад к новостям</a>
+<a href="/" class="add">Вернуться назад к новостям</a>
 
 </body>
 </html>

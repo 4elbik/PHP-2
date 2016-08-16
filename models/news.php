@@ -14,3 +14,9 @@ function News_insert($arr)
               VALUES("'.$arr['title'].'","'.$arr['description'].'","'.$arr['date'].'")';
     sql_exec($query);
 }
+
+function get_news($id)
+{
+    $query = 'SELECT * FROM news WHERE id='.(int)$id.'';
+    return sql_query($query);
+}
