@@ -2,21 +2,25 @@
 
 require_once __DIR__ . '/../functions/sql.php';
 
+
 function News_getAll()
 {
+    $news = new Use_db();
     $query = 'SELECT * FROM news ORDER BY date DESC';
-    return sql_query($query);
+    return $news->sql_query($query);
 }
 
 function News_insert($arr)
 {
+    $news = new Use_db();
     $query = 'INSERT INTO news(title, description, date) 
               VALUES("'.$arr['title'].'","'.$arr['description'].'","'.$arr['date'].'")';
-    sql_exec($query);
+    $news->sql_exec($query);
 }
 
-function get_news($id)
+function get_one_news($id)
 {
+    $news = new Use_db();
     $query = 'SELECT * FROM news WHERE id='.(int)$id.'';
-    return sql_query($query);
+    return $news->sql_query($query);
 }
